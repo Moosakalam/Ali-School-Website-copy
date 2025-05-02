@@ -1,0 +1,124 @@
+/* Contact Section Styles */
+.enquire-form-container {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .enquire-form-container h1 {
+    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .enquire-form-container p {
+    color: #666666;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .enquire-form-container h3 {
+    color: #333333;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .enquire-form-container .required:after {
+    content: " *";
+    color: red;
+  }
+  
+  .enquire-form-container input,
+  .enquire-form-container select,
+  .enquire-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .enquire-form-container .split {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .enquire-form-container .split input {
+    width: 50%;
+  }
+  
+  .enquire-form-container button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .enquire-form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact-details {
+    font-size: 1.1rem;
+    color: #333333;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  .contact-details p {
+    margin: 10px 0;
+  }
+  
+  .contact-details a {
+    color: #333333;
+    text-decoration: none;
+  }
+  
+  .contact-details a:hover {
+    color: #007bff;
+  }
+  
+  .contact-details i {
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .map-container iframe {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 300px;
+  }
+  
+  .container.py-5 {
+    margin-top: 25vh; /* Pushes content down a quarter of the viewport height */
+  }
+  
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+  
+    .col-md-6 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .map-container iframe {
+      height: 250px;
+    }
+  
+    .container.py-5 {
+      margin-top: 15vh; /* Reduced margin for smaller screens to avoid excessive spacing */
+    }
+  }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Name | About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <!-- Include Header -->
+  <%- include('header.ejs') %>
+
+  <!-- Main Content -->
+  <main class="flex-grow-1">
+    <!-- Hero Section -->
+    <div class="about-hero">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1 class="display-4">About Our School</h1>
+            <p class="lead">Building Tomorrow's Leaders Today</p>
+          </div>
+          <div class="col-md-6">
+            <img src="images/image1.jpeg" alt="School Building" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- History Section -->
+    <div class="history-section">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Our History</h2>
+            <p>Founded in 1990, our school has been a beacon of academic excellence and character development for over three decades. What began as a small institution has grown into a comprehensive educational center that serves hundreds of students each year.</p>
+            <p>Our commitment to quality education and holistic development has remained unwavering throughout our journey.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="year">1990</div>
+                <div class="content">School Founded</div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2000</div>
+                <div class="content">Expansion of Facilities</div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2010</div>
+                <div class="content">Introduction of Modern Teaching Methods</div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2020</div>
+                <div class="content">Digital Transformation Initiative</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Values Section -->
+    <div class="values-section">
+      <div class="container py-5">
+        <h2 class="text-center mb-5">Our Core Values</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="value-card">
+              <i class="bi bi-star-fill"></i>
+              <h3>Excellence</h3>
+              <p>Striving for the highest standards in education and personal development.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="value-card">
+              <i class="bi bi-people-fill"></i>
+              <h3>Community</h3>
+              <p>Building strong relationships between students, teachers, and families.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="value-card">
+              <i class="bi bi-lightbulb-fill"></i>
+              <h3>Innovation</h3>
+              <p>Embracing new ideas and technologies to enhance learning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team-section">
+      <div class="container py-5">
+        <h2 class="text-center mb-5">Our Leadership Team</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="team-member">
+              <img src="images/image2.jpeg" alt="Principal" class="rounded-circle">
+              <h3>Dr. Sarah Johnson</h3>
+              <p class="position">Principal</p>
+              <p class="description">With over 20 years of experience in education, Dr. Johnson leads our school with vision and dedication.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team-member">
+              <img src="images/image3.jpg" alt="Vice Principal" class="rounded-circle">
+              <h3>Mr. James Wilson</h3>
+              <p class="position">Vice Principal</p>
+              <p class="description">Mr. Wilson brings innovation and enthusiasm to our academic programs.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team-member">
+              <img src="images/image1.jpeg" alt="Head of Department" class="rounded-circle">
+              <h3>Ms. Emily Brown</h3>
+              <p class="position">Head of Department</p>
+              <p class="description">Ms. Brown ensures excellence in our curriculum development and implementation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Include Footer -->
+  <%- include('footer.ejs') %>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

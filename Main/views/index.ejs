@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Name | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <!-- Include Header -->
+  <%- include('header.ejs') %>
+
+  <!-- Main Content with Carousel -->
+  <main class="flex-grow-1">
+    <div id="schoolCarousel" class="carousel slide" data-bs-ride="carousel" style="height: 50vh; overflow: hidden;">
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active">
+          <img src="/images/image1.jpeg" class="d-block w-100" alt="Event 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Event 1</h5>
+            <p>School Annual Day 2025</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/image2.jpeg" class="d-block w-100" alt="Event 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Event 2</h5>
+            <p>Sports Day Celebration</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/image3.jpg" class="d-block w-100" alt="Event 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Event 3</h5>
+            <p>Science Fair 2025</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#schoolCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#schoolCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Color Flow Section -->
+    <div class="color-flow-section">
+      <div class="water-section" id="water-section">
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+              <img src="/images/logo.png" alt="Circular Photo" class="circular-photo">
+            </div>
+            <div class="col-md-8">
+              <h2>Welcome to Our School</h2>
+              <p>Discover a nurturing environment where students thrive academically and personally. Our dedicated faculty and state-of-the-art facilities ensure a holistic education for all.</p>
+              <p>Learn more about our programs and join our community today!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Section with Circular Picture -->
+    <div class="info-section">
+      <div class="container py-5">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-7">
+            <h2>Our Mission</h2>
+            <p>We are committed to providing a comprehensive education that nurtures creativity, critical thinking, and character development. Our goal is to prepare students for success in an ever-changing world.</p>
+            <p>Through innovative teaching methods and a supportive community, we create an environment where every student can reach their full potential.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="circular-photo-container">
+              <img src="/images/image1.jpeg" alt="Mission Photo" class="circular-photo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Educational Journey Section -->
+    <div class="journey-section">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h1 class="main-title">From Nursery to University</h1>
+          <p class="lead">At our School, every step of your child's learning journey is carefully curated with a holistic, globally-conscious, and immersive approach to education. This ensures that they enjoy the wonderful experiences of childhood, while building a strong academic foundation for lifelong success.</p>
+        </div>
+
+        <!-- Preschool Row -->
+        <div class="row align-items-center mb-5">
+          <div class="col-md-6">
+            <img src="/images/image2.jpeg" alt="Preschool Activities" class="journey-image">
+          </div>
+          <div class="col-md-6">
+            <div class="journey-content">
+              <h2>Preschool</h2>
+              <p>In our Preschool programme, we nurture children's curiosity and cultivate essential skills for inquiry and exploration. Our innovative, play-based curriculum focuses on developing strong reading, listening, and speaking skills, that foster a love of learning and a sense of wonder, that last a lifetime.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CBSE Row -->
+        <div class="row align-items-center mb-5 flex-md-row-reverse">
+          <div class="col-md-6">
+            <img src="/images/image3.jpg" alt="CBSE Education" class="journey-image">
+          </div>
+          <div class="col-md-6">
+            <div class="journey-content">
+              <h2>CBSE</h2>
+              <p>Our CBSE curriculum provides a comprehensive educational framework that emphasizes academic excellence, critical thinking, and holistic development. Through innovative teaching methods and a supportive learning environment, we prepare students for success in higher education and beyond.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VR Tour Section -->
+    <div class="vr-tour-section">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Virtual Campus Tour</h2>
+          <p class="lead">Experience our campus in immersive virtual reality. Explore our facilities and get a feel for our learning environment.</p>
+        </div>
+      </div>
+      
+      <div class="vr-container">
+        <a-scene embedded>
+          <a-sky src="https://raw.githubusercontent.com/aframevr/aframe/master/examples/boilerplate/panorama/puydesancy.jpg" rotation="0 -90 0"></a-sky>
+          <a-camera wasd-controls-enabled="false" look-controls="pointerLockEnabled: false"></a-camera>
+        </a-scene>
+      </div>
+    </div>
+  </main>
+
+  <!-- Include Footer -->
+  <%- include('footer.ejs') %>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const waterSection = document.getElementById('water-section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('water-animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.2,
+        rootMargin: '-50px'
+      });
+
+      if (waterSection) {
+        observer.observe(waterSection);
+      }
+    });
+  </script>
+
+<!-- Chatbot Widget (With Avatars) -->
+<div id="chatbot-container">
+  <div id="chatbot-button">
+    <i class="bi bi-chat-dots-fill"></i>
+  </div>
+  <div id="chatbot-window" class="d-none">
+    <div id="chatbot-messages"></div>
+    <div class="input-group">
+      <input type="text" id="userInput" class="form-control" placeholder="Ask me something...">
+      <button id="sendButton" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  #chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #chatbot-button {
+    width: 65px;
+    height: 65px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  #chatbot-button:hover {
+    background-color: #0b5ed7;
+    transform: scale(1.05);
+  }
+
+  #chatbot-window {
+    width: 320px;
+    height: 450px;
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    animation: fadeIn 0.4s ease;
+  }
+
+  #chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    font-size: 14px;
+    background: #f1f5f9;
+  }
+
+  .message-container {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .user-message, .bot-message {
+    padding: 8px 14px;
+    border-radius: 18px;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 14px;
+  }
+
+  .user-message {
+    margin-left: auto;
+    margin-right: 8px;
+    background-color: #0d6efd;
+    color: white;
+    border-bottom-right-radius: 0;
+  }
+
+  .bot-message {
+    margin-right: auto;
+    margin-left: 8px;
+    background-color: #d1e7dd;
+    color: #212529;
+    border-bottom-left-radius: 0;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .input-group {
+    padding: 10px;
+    background: #ffffff;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+  }
+
+  #userInput {
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #ced4da;
+    padding-left: 15px;
+  }
+
+  #sendButton {
+    border-radius: 0 20px 20px 0;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  @keyframes fadeIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  let messages = [
+    { role: "system", content: `
+        You are a helpful assistant for Greenwood High School.
+        You assist with admissions, timings, fees, events, and general school information.
+        If you are unsure, politely advise the user to contact the school office directly.
+        The Timings are 9:00 to 5:00
+        you should give answers in small sentences
+        Open from mon to friday
+      `}
+  ];
+
+  async function sendMessage() {
+    const input = document.getElementById('userInput');
+    const userMessage = input.value.trim();
+    if (!userMessage) return;
+
+    messages.push({ role: "user", content: userMessage });
+    appendMessage('user', userMessage);
+    input.value = '';
+
+    try {
+      const response = await fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userMessage: userMessage,
+          conversation: messages
+        })
+      });
+
+      const data = await response.json();
+      const botReply = data.reply || 'Sorry, I did not understand that.';
+
+      messages.push({ role: "assistant", content: botReply });
+      appendMessage('bot', botReply);
+    } catch (error) {
+      console.error('Chatbot error:', error);
+      appendMessage('bot', 'Oops! Something went wrong. Please try again later.');
+    }
+  }
+
+  function appendMessage(sender, text) {
+    const chatBox = document.getElementById('chatbot-messages');
+
+    const container = document.createElement('div');
+    container.className = 'message-container ' + (sender === 'user' ? 'justify-content-end' : 'justify-content-start');
+
+    const avatar = document.createElement('img');
+    avatar.className = 'avatar';
+    avatar.src = sender === 'user' 
+      ? 'https://cdn-icons-png.flaticon.com/512/1946/1946429.png'  // User Avatar
+      : 'https://cdn-icons-png.flaticon.com/512/4712/4712027.png';  // Bot Avatar
+
+    const message = document.createElement('div');
+    message.className = sender === 'user' ? 'user-message' : 'bot-message';
+    message.textContent = text;
+
+    if (sender === 'user') {
+      container.appendChild(message);
+      container.appendChild(avatar);
+    } else {
+      container.appendChild(avatar);
+      container.appendChild(message);
+    }
+
+    chatBox.appendChild(container);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  document.getElementById('chatbot-button').addEventListener('click', () => {
+    document.getElementById('chatbot-window').classList.toggle('d-none');
+  });
+
+  document.getElementById('sendButton').addEventListener('click', sendMessage);
+
+  document.getElementById('userInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+  });
+</script>
+
+
+</body>
+</html>

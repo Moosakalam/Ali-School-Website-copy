@@ -1,0 +1,55 @@
+/* Gallery Section Styles */
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-item:hover .gallery-caption {
+    opacity: 1;
+  }
+  
+  .container.py-5 {
+    margin-top: 25vh; /* Pushes content down a quarter of the viewport height */
+  }
+  
+  @media (max-width: 768px) {
+    .container.py-5 {
+      margin-top: 15vh; /* Reduced margin for smaller screens */
+    }
+  
+    .gallery-item {
+      margin-bottom: 20px;
+    }
+  }
